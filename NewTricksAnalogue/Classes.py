@@ -1,6 +1,8 @@
 #class Animal(object): Python 2.x
 class Animal:
     type = "Animal"
+    color = ""
+    size = ""
 
     def __init__(self, color="Grey", size="Small"):
         self.color = color
@@ -17,7 +19,7 @@ class Animal:
 
 class Tiger(Animal):
     type = "Tiger"
-    stripes_color = "Brown"
+    stripes_color = ""
 
     def __init__(self, color="Orange", size="Medium", stripes=True, stripes_color="Black"):
         super().__init__(color, size)
@@ -26,15 +28,15 @@ class Tiger(Animal):
 
     # declaring __repr__() method
     def __repr__(self):
-        o = self
-        return_str = (f'The creature is {o.size} {o.type}, it is {o.color} and ' +
-                      (f"has {o.stripes_color} stripes" if o.stripes else "has no stripes"))
+        return_str = (f'The creature is {self.size} {self.type}, it is {self.color} and ' +
+                      (f"has {self.stripes_color} stripes" if self.stripes else "has no stripes"))
         return return_str
 
 
 class Elephant(Animal):
     type = "Elephant"
     spots = False
+    spots_color = ""
 
     def __init__(self, color="Greyish Black", size="Large", spots=False, spots_color="Pink"):
         super().__init__(color, size)
@@ -43,9 +45,8 @@ class Elephant(Animal):
 
     # declaring __repr__() method
     def __repr__(self):
-        o = self
-        return_str = (f'The creature is {o.size} {o.type}, it is {o.color} and ' +
-                      (f"has {o.spots_color} spots" if o.spots else "has no spotes"))
+        return_str = (f'The creature is {self.size} {self.type}, it is {self.color} and ' +
+                      (f"has {self.spots_color} spots" if self.spots else "has no spotes"))
         return return_str
 
 
