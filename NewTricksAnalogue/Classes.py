@@ -1,8 +1,10 @@
-#class Animal(object): Python 2.x
+# class Animal(object): Python 2.x
 class Animal:
     type = "Animal"
     color = ""
     size = ""
+
+    # TODO: add subspecies = ""
 
     def __init__(self, color="Grey", size="Small"):
         self.color = color
@@ -20,6 +22,7 @@ class Animal:
 class Tiger(Animal):
     type = "Tiger"
     stripes_color = ""
+    stripes = False
 
     def __init__(self, color="Orange", size="Medium", stripes=True, stripes_color="Black"):
         super().__init__(color, size)
@@ -28,9 +31,8 @@ class Tiger(Animal):
 
     # declaring __repr__() method
     def __repr__(self):
-        return_str = (f'The creature is {self.size} {self.type}, it is {self.color} and ' +
-                      (f"has {self.stripes_color} stripes" if self.stripes else "has no stripes"))
-        return return_str
+        return (f'The creature is {self.size} {self.type}, it is {self.color} and ' +
+                (f"has {self.stripes_color} stripes" if self.stripes else "has no stripes"))
 
 
 class Elephant(Animal):
@@ -45,13 +47,12 @@ class Elephant(Animal):
 
     # declaring __repr__() method
     def __repr__(self):
-        return_str = (f'The creature is {self.size} {self.type}, it is {self.color} and ' +
-                      (f"has {self.spots_color} spots" if self.spots else "has no spotes"))
-        return return_str
+        return (f'The creature is {self.size} {self.type}, it is {self.color} and ' +
+                (f"has {self.spots_color} spots" if self.spots else "has no spotes"))
 
 
 def main():
-    obj = Animal("Brown", "Large")
+    obj = Animal("Dark Grey", "Large")
     print(obj)
     print(str(obj))
     print(repr(obj))
