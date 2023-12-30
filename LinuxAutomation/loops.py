@@ -8,5 +8,17 @@ arrayOfOneBand = ['tic', 'tac', 'toe']
 for i, v in enumerate(arrayOfOneBand):
     print(i, v)
 
-#while chunk := fp.read(200):
-#    print(chunk)
+count = 0
+while count < 3:
+    print(f"The count is {count}")
+    count += 1
+
+for i in range(1, 10):
+    if i == 3:
+        continue
+    print(i)
+    if i == 7:
+        break
+    else:
+        print("else")   # this will not be printed if break is executed in the previous line
+           
