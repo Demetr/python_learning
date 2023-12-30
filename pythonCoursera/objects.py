@@ -4,7 +4,8 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-class ShinyNew(object):
+#class ShinyNew(object): obsolete in Python 3
+class ShinyNew:
     def __init__(self, a=1, b=2):
         self.a = a
         self.b = b
